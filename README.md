@@ -102,21 +102,31 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
+    // 👤 Users collection
     match /users/{uid} {
       allow read, write: if request.auth != null
                          && request.auth.uid == uid;
     }
 
+    // 💬 Conversations collection
     match /conversations/{conversationId} {
-      allow read, write: if request.auth != null
-                         && request.auth.uid == resource.data.ownerUid;
+
+      // Allow CREATE (use request.resource)
+      allow create: if request.auth != null
+                    && request.auth.uid == request.resource.data.ownerUid;
+
+      // Allow READ / UPDATE / DELETE (use resource)
+      allow read, update, delete: if request.auth != null
+                    && request.auth.uid == resource.data.ownerUid;
     }
 
+    // 📨 Messages subcollection
     match /conversations/{conversationId}/messages/{messageId} {
       allow read, write: if request.auth != null;
     }
   }
 }
+
 
 ⚙️ Setup Instructions
 1️⃣ Clone Repository
