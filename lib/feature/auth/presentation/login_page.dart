@@ -76,11 +76,10 @@ class LoginPage extends StatelessWidget {
                       },
                       child: const Text(
                         "Continue as Guest",
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 16,color: Colors.grey),
                       ),
                     ),
                   ),
-
                   const SizedBox(height: 16),
 
                   /// Google Sign In
