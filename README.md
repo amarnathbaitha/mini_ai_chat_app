@@ -44,10 +44,7 @@ This app supports:
 
 This project follows a **feature-based clean architecture** with separation of concerns:
 ```
-lib/
- ├── core/
- │    ├── constants/
- │    ├── utils/
+lib/   
  │
  ├── features/
  │    ├── auth/
