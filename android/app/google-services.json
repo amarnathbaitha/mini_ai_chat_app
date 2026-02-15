@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "798569843065",
+    "project_id": "mini-ai-chat",
+    "storage_bucket": "mini-ai-chat.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798569843065:android:16533cf7ddf4fce64a87a8",
+        "android_client_info": {
+          "package_name": "com.amar.mini_ai_chat_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo6w_zoR3gM3jyhzpDZM7kepNjjvqxrSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
