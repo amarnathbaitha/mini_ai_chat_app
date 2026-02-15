@@ -12,7 +12,20 @@
           "package_name": "com.amar.mini_ai_chat_app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "798569843065-voqc1me1qikam1b3cc8j5labt8e6uf1h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amar.mini_ai_chat_app",
+            "certificate_hash": "dc4c76df130c706f7863033623a91d4db175ae0c"
+          }
+        },
+        {
+          "client_id": "798569843065-19gionkmtrfkqqnkosp0vo4v791t3f3i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCo6w_zoR3gM3jyhzpDZM7kepNjjvqxrSw"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798569843065-19gionkmtrfkqqnkosp0vo4v791t3f3i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
