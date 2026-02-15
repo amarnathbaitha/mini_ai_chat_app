@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mini_ai_chat_app/feature/auth/data/auth_repository.dart';
 import 'package:mini_ai_chat_app/feature/auth/data/user_repository.dart';
@@ -15,8 +16,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<SignOutRequested>(_onSignOut);
   }
 
-  void _onAppStarted(AppStarted event, Emitter<AuthState> emit) {
-    final user = _authRepository.currentUser;
+  Future<void> _onAppStarted(
+      AppStarted event,
+      Emitter<AuthState> emit,
+      ) async {
+    emit(AuthLoading());
+
+    final user = FirebaseAuth.instance.currentUser;
 
     if (user != null) {
       emit(AuthAuthenticated(user));
@@ -24,6 +30,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       emit(AuthUnauthenticated());
     }
   }
+
 
   Future<void> _onAnonymousSignIn(
       SignInAnonymouslyRequested event,
