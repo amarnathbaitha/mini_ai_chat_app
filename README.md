@@ -43,24 +43,23 @@ This app supports:
 ## 🏗️ Architecture
 
 This project follows a **feature-based clean architecture** with separation of concerns:
-
+```
 lib/
-├── core/
-│ ├── constants/
-│ ├── utils/
-│
-├── features/
-│ ├── auth/
-│ │ ├── bloc/
-│ │ ├── data/
-│ │ ├── presentation/
-│ │
-│ ├── chat/
-│ │ ├── bloc/
-│ │ ├── data/
-│ │ ├── presentation/
-
-
+ ├── core/
+ │    ├── constants/
+ │    ├── utils/
+ │
+ ├── features/
+ │    ├── auth/
+ │    │     ├── bloc/
+ │    │     ├── data/
+ │    │     ├── presentation/
+ │    │
+ │    ├── chat/
+ │    │     ├── bloc/
+ │    │     ├── data/
+ │    │     ├── presentation/
+```
 ### Architecture Highlights
 
 - BLoC for state management
