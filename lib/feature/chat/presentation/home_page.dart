@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:mini_ai_chat_app/feature/auth/bloc/auth_bloc.dart';
+import 'package:mini_ai_chat_app/feature/auth/bloc/auth_event.dart';
 import 'package:mini_ai_chat_app/feature/chat/data/chat_repository.dart';
 
-import '../../auth/bloc/auth_bloc.dart';
-import '../../auth/bloc/auth_event.dart';
+
 import 'chat_screen.dart';
 
 class HomePage extends StatelessWidget {
@@ -127,8 +128,7 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () async {
           final chatRepo = context.read<ChatRepository>();
-          final conversationId = await chatRepo.createConversation();
-          print("Created conversation: $conversationId");
+          await chatRepo.createConversation();
         },
         icon: const Icon(Icons.add),
         label: const Text("New Chat"),

@@ -45,7 +45,7 @@ class _ChatScreenState extends State<ChatScreen> {
     });
 
 
-    /// 2️⃣ Simulate AI response
+    /// Simulate AI response
     _simulateAIResponse("This is a simulated AI response to: $text");
   }
 
@@ -165,7 +165,6 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
           ),
 
-          /// 🔥 Input Field
           Padding(
             padding: const EdgeInsets.all(12),
             child: Row(
